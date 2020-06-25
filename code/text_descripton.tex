@@ -1,0 +1,23 @@
+%Copyright 2020 RICHARD TJÖRNHAMMAR
+%
+%Licensed under the Apache License, Version 2.0 (the "License");
+%you may not use this file except in compliance with the License.
+%You may obtain a copy of the License at
+%
+%    http://www.apache.org/licenses/LICENSE-2.0
+%
+%Unless required by applicable law or agreed to in writing, software
+%distributed under the License is distributed on an "AS IS" BASIS,
+%WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+%See the License for the specific language governing permissions and
+%limitations under the License.
+
+\secton{Captions for the enrichment quantification}
+
+clusterprofiler~\cite{CP} was used to quantify the enrichments. p values were calculated from the spearman correlations of the gene expressions towards insulin sensitivity as well as independent ttest between the T2D and NGT groups. Gene annotations were translated to entrez gene ids from the corresponding gene symbols and used in all the enrichment quantifications.
+
+Figure(Dotplot) Functional Gene Ontology (GO)~\cite{GO} enrichments were quantified using the correlation significances and compareCluster function at a q value cutoff of 0.1. From this plot it is evident that electron transfer in respiration as well as NADH turnover is affected by insulin sensitivity variability.
+
+Figue(CNET) Compartment quantification was conducted using the cnetplot in clusterprofiler. GO Compartment enrichments were quantified with the gene correlation significances Bonferroni Hochberg multiple comparisons correction together with p and q value cutoffs set to 0.1. Fold change values between the T2Ds and NGTs were added in after quantification. The plot show that most of the genes in the mitochondrial compartments are down in diabetics. The inner mitochondrial membrane connects to and affects mitochondrial protein as well as  oxireductase complexes. The plot conveys the information that the inner components of the mitochondria is wokring at reduced efficacy in diabets.
+
+Figure(Upset) An upset plot for the compartments was also drawn using the same enrichment quantification as in CNET figure together with the upsetplot function. The inner membrane of the mitochondria has a large intersection towards known structural functions such as the respiratory chain and oxireductase, but also to other structurally important constituents such as the mitochondrial matrix. This is the main reason why it is the leading Compartment in the upset plot.
