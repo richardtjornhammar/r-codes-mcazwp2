@@ -25,6 +25,7 @@ in with pkgs; {
     buildInputs =  [
       R
       rPackages .knitr
+      rPackages .xlsx
       rPackages .rmarkdown
       rPackages .oligo
       rPackages .pd_hta_2_0
