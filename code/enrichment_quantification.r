@@ -151,7 +151,7 @@ print(O)
 foldchanges <- translated_values_from_file( value="B.T2D.NGT.fc" )
 ck <- cluster_enrichment( O )
 
-draw_dot_plot( ck )
+#draw_dot_plot( ck )
 
 namespace <- namespace_from_file()
 #
@@ -169,6 +169,11 @@ ego <- enrichGO(gene          = O[[value]]   ,
                 pAdjustMethod = "BH" ,
                 pvalueCutoff  = universal_cutoff ,
                 qvalueCutoff  = universal_cutoff )
+if ( 1 ) {
+    library('xlsx') 
+    write.xlsx( ego,file='../results/cc_enrich_mazwp2.xlsx' )
+    exit(1)
+}
 #
 # GRAB THE PERTINENT FOLDCHANGES AND
 # FEED THEM TO THE CNET
